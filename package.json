@@ -1,0 +1,12 @@
+{
+  "name": "hyunwook-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "김현욱의 관심사와 경험, 프로젝트를 소개하는 개인 웹사이트",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
