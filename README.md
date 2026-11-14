@@ -22,7 +22,7 @@ npm run preview
 - `assets/site.css`: 반응형 레이아웃과 테마.
 - `assets/site.js`: 상세 모달, 시작 메뉴, 이메일 복사, 섹션 표시.
 - `assets/diagrams/`: 공개용 구성도와 프로젝트 카드 그림.
-- `assets/images/`: 증명사진, 다이빙 마스크 얼굴 SVG, LiveNote API 명세 이미지.
+- `assets/images/`: 증명사진, 다이빙 마스크 얼굴 SVG와 프로젝트 실행 화면.
 - `assets/fonts/`, `assets/vendor/`: 자체 제공하는 글꼴과 98.css, 라이선스.
 - `dist/`: **배포용 파일만** 생성되는 폴더.
 - `.github/workflows/pages.yml`: 수동 실행 방식 GitHub Pages 배포 워크플로.
@@ -34,7 +34,7 @@ About → Experience → Projects → Education → Certifications → Skills �
 
 ## 공개 자료 범위
 
-AKA AI는 담당 역할과 일반적인 문제 해결 경험으로 축약했습니다. 상담 데이터 수량, 고객사와 제품명, 내부 평가 규칙, DB 구조, 서비스 접속 정보와 사내 화면은 포함하지 않았습니다. OpenMesh 데모 주소와 임시 체험 계정을 연결했습니다. 현재 라디오 전원이 꺼져 있어 무선 송수신이 동작하지 않는다는 안내도 표시합니다. 원본 PDF, DOCX, 인턴십 기록은 배포하지 않습니다.
+AKA AI는 담당 역할과 일반적인 문제 해결 경험으로 축약했습니다. 상담 데이터 수량, 고객사와 제품명, 내부 평가 규칙, DB 구조, 서비스 접속 정보가 드러나는 화면은 포함하지 않았습니다. OpenMesh 데모 주소와 임시 체험 계정을 연결했습니다. 현재 라디오 전원이 꺼져 있어 무선 송수신이 동작하지 않는다는 안내도 표시합니다. 선별한 실행 화면 이미지만 포함하며 원본 PDF, DOCX, 인턴십 기록은 배포하지 않습니다.
 
 카카오 경험은 인턴십 중 해 본 일과 배우는 기술, 시스템에 대한 관심을 중심으로 소개합니다. LiveNote와 CKKS는 팀 역할을 구분했고, CKKS의 21초와 정확도 54%는 맥북 CPU의 FER2013 표정 분류 실험 조건을 함께 기재했습니다. 기존 수치 간의 단순 개선율은 사용하지 않았습니다.
 
@@ -42,29 +42,19 @@ NHN 제출용 PDF는 이 웹사이트와 별도 산출물입니다. 브라우저
 
 ## GitHub Pages 게시 준비
 
-**로컬 Git 저장소에서 소스를 관리합니다. 원격 저장소 생성, push, Pages 활성화와 배포는 아직 실행하지 않았습니다.**
+소스 저장소는 `nongman25/hw_portfolio`입니다. GitHub Pages 활성화와 배포 실행은 별도로 진행합니다.
 
-게시할 저장소 이름은 `hw_portfolio`로 예정되어 있습니다. GitHub Pages 프로젝트 사이트로 게시하면 기본 주소는 `https://nongman25.github.io/hw_portfolio/`입니다. `nongman25.io`를 실제 도메인으로 쓰려면 별도의 도메인 소유 및 DNS 설정이 필요합니다. `CNAME` 파일은 넣지 않았습니다.
+GitHub Pages 프로젝트 사이트로 게시하면 기본 주소는 `https://nongman25.github.io/hw_portfolio/`입니다. `nongman25.io`를 실제 도메인으로 쓰려면 별도의 도메인 소유 및 DNS 설정이 필요합니다. `CNAME` 파일은 넣지 않았습니다.
 
-나중에 게시를 결정하면 다음 순서로 진행할 수 있습니다. 아래 원격 작업은 아직 실행하지 않았습니다.
+게시할 때 다음 순서로 진행합니다.
 
-1. 기존 저장소 유무를 `gh repo view nongman25/hw_portfolio`로 확인합니다.
-2. 원격 저장소가 없다면 이 폴더의 로컬 커밋으로 생성합니다. 이미 있다면 기존 이력을 보존하면서 필요한 파일을 반영합니다.
-
-```sh
-# 원격 저장소가 없을 때만 실행
-# 실행 위치: portfolio-web 폴더
-
-gh repo create nongman25/hw_portfolio --public --source . --remote origin --push
-```
-
-3. GitHub 저장소의 Settings → Pages에서 Source를 GitHub Actions로 지정합니다. CLI로 새 Pages 설정을 생성한다면 다음과 같습니다.
+1. GitHub 저장소의 Settings → Pages에서 Source를 GitHub Actions로 지정합니다. CLI로 새 Pages 설정을 생성한다면 다음과 같습니다.
 
 ```sh
 gh api --method POST repos/nongman25/hw_portfolio/pages -f build_type=workflow
 ```
 
-4. Actions에서 수동으로 배포를 실행합니다.
+2. Actions에서 `Publish portfolio to GitHub Pages` 워크플로를 선택하고 `Run workflow`를 실행합니다. CLI로는 다음과 같습니다.
 
 ```sh
 gh workflow run pages.yml --repo nongman25/hw_portfolio --ref main
@@ -81,4 +71,4 @@ gh run list --repo nongman25/hw_portfolio --workflow pages.yml --limit 3
 - JetBrains Mono 2.304 (SIL OFL): https://github.com/JetBrains/JetBrainsMono
 - GitHub Pages 안내: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
 
-글꼴과 CSS는 로컬에 포함되어 외부 CDN 접속 없이 표시됩니다. CKKS 구성도는 제공된 자료에서 재사용했으며 소스 주석을 제거했습니다. OpenMesh 상세 구성도는 제거하고 데모 링크를 연결했습니다. AKA에는 내부 아키텍처 대신 담당 업무를 요약한 새 개념도를 사용했습니다. LiveNote 그림과 API 명세는 제공된 포트폴리오에 근거합니다.
+글꼴과 CSS는 로컬에 포함되어 외부 CDN 접속 없이 표시됩니다. CKKS 구성도는 제공된 자료에서 재사용했으며 소스 주석을 제거했습니다. OpenMesh 상세 구성도는 제거하고 데모 링크를 연결했습니다. AKA에는 내부 아키텍처 대신 담당 업무를 요약한 새 개념도를 사용했습니다. LiveNote 구성도는 제공된 프로젝트 자료에 근거하며, 실행 화면은 3조 Manual Report PDF에서 추출했습니다. 나머지 실행 화면은 각 프로젝트 포트폴리오의 이미지를 재사용했습니다.

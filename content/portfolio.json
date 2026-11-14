@@ -77,7 +77,21 @@
         "username": "guest",
         "password": "3434"
       },
-      "demoNotice": "현재는 라디오 전원을 꺼 두어 무선 메시지 송수신은 동작하지 않습니다."
+      "demoNotice": "현재는 라디오 전원을 꺼 두어 무선 메시지 송수신은 동작하지 않습니다.",
+      "screenshots": [
+        {
+          "src": "assets/images/projects/openmesh-overview.png",
+          "caption": "라디오와 네트워크",
+          "width": 3072,
+          "height": 1390
+        },
+        {
+          "src": "assets/images/projects/openmesh-console.png",
+          "caption": "메시지 송수신 콘솔",
+          "width": 3072,
+          "height": 1358
+        }
+      ]
     },
     {
       "id": "aka",
@@ -125,7 +139,15 @@
       ],
       "outcome": "",
       "note": "",
-      "diagramCaption": "AI 고객 Agent 프롬프트 개선, 제품 지식 RAG 평가, SaaS 서비스 연동 구조를 정리한 개념도입니다."
+      "diagramCaption": "AI 고객 Agent 프롬프트 개선, 제품 지식 RAG 평가, SaaS 서비스 연동 구조를 정리한 개념도입니다.",
+      "screenshots": [
+        {
+          "src": "assets/images/projects/aka-prompt-comparison.png",
+          "caption": "프롬프트 비교",
+          "width": 2932,
+          "height": 1512
+        }
+      ]
     },
     {
       "id": "livenote",
@@ -177,7 +199,27 @@
       ],
       "outcome": "",
       "note": "",
-      "diagramCaption": "React 프론트엔드, Spring Boot 백엔드, FastAPI AI 서버가 REST(HTTPS)와 WebSocket/STOMP, 콜백으로 연결되는 구성입니다."
+      "diagramCaption": "React 프론트엔드, Spring Boot 백엔드, FastAPI AI 서버가 REST(HTTPS)와 WebSocket/STOMP, 콜백으로 연결되는 구성입니다.",
+      "screenshots": [
+        {
+          "src": "assets/images/projects/livenote-session.png",
+          "caption": "실시간 강의와 추천 자료",
+          "width": 1040,
+          "height": 591
+        },
+        {
+          "src": "assets/images/projects/livenote-lectures.png",
+          "caption": "내 강의",
+          "width": 1040,
+          "height": 588
+        },
+        {
+          "src": "assets/images/projects/livenote-new-lecture.png",
+          "caption": "새 강의 설정",
+          "width": 1040,
+          "height": 592
+        }
+      ]
     },
     {
       "id": "ckks",
@@ -221,7 +263,21 @@
       ],
       "outcome": "",
       "note": "",
-      "diagramCaption": "공개 데이터셋으로 평문 CNN을 학습한 뒤, Streamlit 클라이언트에서 이미지를 CKKS로 암호화해 보내면 FastAPI 서버가 복호화 없이 추론하고, 클라이언트에서 결과를 복호화하는 흐름입니다."
+      "diagramCaption": "공개 데이터셋으로 평문 CNN을 학습한 뒤, Streamlit 클라이언트에서 이미지를 CKKS로 암호화해 보내면 FastAPI 서버가 복호화 없이 추론하고, 클라이언트에서 결과를 복호화하는 흐름입니다.",
+      "screenshots": [
+        {
+          "src": "assets/images/projects/ckks-history.png",
+          "caption": "누적 감정 통계",
+          "width": 980,
+          "height": 569
+        },
+        {
+          "src": "assets/images/projects/ckks-preprocessing.png",
+          "caption": "입력 이미지 전처리",
+          "width": 1170,
+          "height": 793
+        }
+      ]
     }
   ],
   "activities": [
